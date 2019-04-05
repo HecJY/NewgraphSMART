@@ -6,6 +6,12 @@ import plotly.graph_objs as go
 
 import networkx as nx
 #from stream import stream as str
+
+#read from the database that contains the information
+
+
+
+#generate random seeds as a method of demonstration
 G=nx.random_geometric_graph(200,0.125)
 pos=nx.get_node_attributes(G,'pos')
 
@@ -67,14 +73,20 @@ for node in G.nodes():
 
 
 for node, adjacencies in enumerate(G.adjacency()):
+    
     node_trace['marker']['color']+=tuple([len(adjacencies[1])])
     node_info = 'number of retweets: '+str(len(adjacencies[1]))
     node_info += '<br>'
     #add the tweet information
     node_info += "example"
     #add the number of likes and retweets information
-
-    #add the 
+    node_info += '<br>'
+    node_info += 'This text serves as an example demonstration function'
+    #add the information about the
+    node_info += '<br>'
+    node_info += 'The sample number of likes is xxxx'
+    node_info += '<br>'
+    node_info += 'The sample number of retweets is xxx'
 
     node_trace['text']+=tuple([node_info])
 
