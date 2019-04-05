@@ -4,6 +4,7 @@
 <html>
 <head>
 <script>
+
 window.onload = function() {
   var chart = new CanvasJS.Chart("chartContainer", {
     animationEnabled: true,
@@ -25,12 +26,15 @@ window.onload = function() {
     },
     data: [{
       type: "bubble",
-      toolTipContent: "<b>{name}</b><br/>The sum of likes and re-tweets {x}% <br/> Popularity rate <br/> Number of comments",
+      toolTipContent: "<b>{name}</b><br/>The sum of likes and re-tweets {x}% <br/> Popularity rate {y}%<br/>",
       dataPoints: [
-        { x: 39.6, y: 5.225, z:1347, name:"Obama's tweets" },
+        { x: 39.6, y: 5.225, z:1347, name:"JustinB's tweets" },
         { x: 3.3, y: 4.17, z:21.49, name:"Trump's tweets" },
         { x: 1.5, y: 4.043, z:304.09, name:"ALy's tweets" },
         { x: 17.4, y: 2.647, z:2.64, name:"Wang's tweets" },
+        { x: 12, y: 3.7, z:254, name:"Jiaxing's tweets" },
+        { x: 41, y: 27.3, z:46, name:"Tesla's tweets" },
+        { x: 67, y: 39, z:66, name:"Microsoft's tweets" },
     ]
   }]
 });

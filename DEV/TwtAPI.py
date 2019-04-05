@@ -19,7 +19,8 @@ def w_file1(api):
 def update(api):
     #update every five mins
     period = time.time() + 60*5
-    while(time.time() < period)
+    while(time.time() < period):
+        pass
     w_file(api)
     return
 
@@ -31,7 +32,6 @@ def data_cral():
     while(1):
         update(api)
 
-    return
 
 #Get the class in the file
 def read_file():
@@ -43,3 +43,9 @@ def read_file():
         total_list.append(user)
 
     return total_list
+
+
+if __name__ == '__main__':
+    data_cral()
+
+    
